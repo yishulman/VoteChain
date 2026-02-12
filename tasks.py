@@ -22,7 +22,7 @@ def build_doc(c):
     if shutil.which("sphinx-autobuild") is None:
         raise SystemExit(
             "Error: 'sphinx-autobuild' not found. "
-            "Install dependencies with: pip install -r requirements.txt"
+            "Install dependencies with: uv sync"
         )
 
     c.run("sphinx-autobuild source/ build/")

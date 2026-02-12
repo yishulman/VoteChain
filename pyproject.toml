@@ -1,0 +1,12 @@
+[project]
+name = "votechain"
+version = "0.1.0"
+description = "Blockchain-based voting system"
+authors = [{ name = "Yisrael Shulman" }]
+requires-python = ">=3.10"
+dependencies = [
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-rtd-theme",
+    "invoke",
+]
