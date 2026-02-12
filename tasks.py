@@ -1,4 +1,6 @@
+import shutil
 from invoke import task
+
 
 @task
 def build_doc(c):
@@ -17,4 +19,10 @@ def build_doc(c):
     -------
     None
     """
+    if shutil.which("sphinx-autobuild") is None:
+        raise SystemExit(
+            "Error: 'sphinx-autobuild' not found. "
+            "Install dependencies with: pip install -r requirements.txt"
+        )
+
     c.run("sphinx-autobuild source/ build/")
